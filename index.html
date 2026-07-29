@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Profile Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="main-container">
+
+    <!-- Left Section -->
+
+    <div class="left">
+
+        <h1>🎓 Student Profile Generator</h1>
+
+        <p class="subtitle">
+            Create Your Beautiful Student Profile
+        </p>
+
+        <label for="name">
+            👤 Student Name
+        </label>
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Enter Your Name">
+
+        <p id="charCount">
+            Characters : 0
+        </p>
+
+        <label for="age">
+            🎂 Age
+        </label>
+
+        <input
+            type="number"
+            id="age"
+            placeholder="Enter Your Age">
+
+        <label for="subject">
+            📚 Favourite Subject
+        </label>
+
+        <input
+            type="text"
+            id="subject"
+            placeholder="Enter Favourite Subject">
+
+        <label for="color">
+            🎨 Favourite Color
+        </label>
+
+        <select id="color">
+
+            <option value="Red">Red</option>
+
+            <option value="Blue">Blue</option>
+
+            <option value="Green">Green</option>
+
+            <option value="Yellow">Yellow</option>
+
+            <option value="Purple">Purple</option>
+
+            <option value="Black">Black</option>
+
+            <option value="White">White</option>
+
+        </select>
+
+        <label for="photo">
+            📷 Upload Profile Picture
+        </label>
+
+        <input
+            type="file"
+            id="photo"
+            accept="image/*">
+
+        <h3 id="greeting">
+            Welcome Student 👋
+        </h3>
+
+        <p id="todayDate"></p>
+
+        <div class="buttons">
+
+            <button id="createBtn">
+                ✨ Create Profile
+            </button>
+
+            <button id="themeBtn">
+                🌙 Dark Mode
+            </button>
+
+            <button id="hideBtn">
+                👁 Hide Profile
+            </button>
+
+            <button id="resetBtn">
+                🔄 Reset
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Right Section -->
+
+    <div class="right">
+
+        <div id="profileCard" class="profileCard">
+
+            <div class="avatar">
+
+                <img
+                    id="profileImage"
+                    src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                    alt="Student">
+
+            </div>
+
+            <h2>Student Profile</h2>
+
+                        <p id="cardGreeting">
+                Welcome 👋
+            </p>
+
+            <p id="cardDate">
+                Today's Date
+            </p>
+
+            <hr>
+
+            <p>
+                <strong>👤 Name :</strong>
+                <span id="displayName">Not Entered</span>
+            </p>
+
+            <p>
+                <strong>🎂 Age :</strong>
+                <span id="displayAge">Not Entered</span>
+            </p>
+
+            <p>
+                <strong>📚 Favourite Subject :</strong>
+                <span id="displaySubject">Not Entered</span>
+            </p>
+
+            <p>
+                <strong>🎨 Favourite Color :</strong>
+                <span id="displayColor">Not Selected</span>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

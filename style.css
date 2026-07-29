@@ -1,0 +1,417 @@
+/* ===================================
+   RESET
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ===================================
+   BODY
+=================================== */
+
+body{
+
+    background:linear-gradient(135deg,#6C63FF,#4FACFE,#00C9A7);
+    background-size:300% 300%;
+    animation:bgAnimation 8s infinite alternate;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+
+}
+
+@keyframes bgAnimation{
+
+    0%{
+        background-position:left;
+    }
+
+    100%{
+        background-position:right;
+    }
+
+}
+
+/* ===================================
+   MAIN CONTAINER
+=================================== */
+
+.main-container{
+
+    width:1200px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:40px;
+
+}
+
+/* ===================================
+   LEFT CARD
+=================================== */
+
+.left{
+
+    width:500px;
+    background:rgba(255,255,255,.20);
+    backdrop-filter:blur(20px);
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+    border:2px solid rgba(255,255,255,.30);
+
+}
+
+.left h1{
+
+    color:white;
+    text-align:center;
+    font-size:38px;
+    margin-bottom:10px;
+
+}
+
+.subtitle{
+
+    color:white;
+    text-align:center;
+    margin-bottom:25px;
+
+}
+
+label{
+
+    display:block;
+    margin-top:15px;
+    color:white;
+    font-weight:bold;
+
+}
+
+input,
+select{
+
+    width:100%;
+    padding:14px;
+    margin-top:8px;
+    border:none;
+    border-radius:12px;
+    outline:none;
+    font-size:16px;
+
+}
+
+input:focus,
+select:focus{
+
+    box-shadow:0 0 10px white;
+
+}
+
+#charCount{
+
+    color:white;
+    margin-top:10px;
+
+}
+
+#greeting{
+
+    color:#FFF176;
+    text-align:center;
+    margin-top:20px;
+
+}
+
+#todayDate{
+
+    color:white;
+    text-align:center;
+    margin-top:10px;
+
+}
+/* ===================================
+   BUTTONS
+=================================== */
+
+.buttons{
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+    margin-top:25px;
+
+}
+
+button{
+
+    padding:15px;
+    border:none;
+    border-radius:15px;
+    background:linear-gradient(45deg,#FF6B6B,#FF9F43);
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+
+}
+
+button:hover{
+
+    transform:translateY(-5px);
+    background:linear-gradient(45deg,#6C63FF,#00C9A7);
+
+}
+
+/* ===================================
+   RIGHT SECTION
+=================================== */
+
+.right{
+
+    width:430px;
+
+}
+
+/* ===================================
+   PROFILE CARD
+=================================== */
+
+.profileCard{
+
+    background:white;
+    border-radius:25px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+    transition:.4s;
+
+}
+
+.profileCard:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* ===================================
+   PROFILE IMAGE
+=================================== */
+
+.avatar{
+
+    width:140px;
+    height:140px;
+    margin:auto;
+    border-radius:50%;
+    overflow:hidden;
+    border:5px solid #6C63FF;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+}
+
+.avatar img{
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+}
+
+/* ===================================
+   PROFILE TEXT
+=================================== */
+
+.profileCard h2{
+
+    color:#6C63FF;
+    margin-top:20px;
+    margin-bottom:15px;
+
+}
+
+#cardGreeting{
+
+    color:#ff6b6b;
+    font-weight:bold;
+
+}
+
+#cardDate{
+
+    color:#777;
+    margin-bottom:20px;
+
+}
+
+.profileCard p{
+
+    font-size:18px;
+    margin:12px 0;
+    color:#444;
+
+}
+
+hr{
+
+    border:none;
+    height:2px;
+    background:linear-gradient(to right,#6C63FF,#00C9A7);
+    margin:20px 0;
+
+}
+/* ===================================
+   DARK MODE
+=================================== */
+
+.dark-mode{
+
+    background:linear-gradient(135deg,#0f172a,#1e293b,#020617);
+
+}
+
+.dark-mode .left{
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.dark-mode .left h1,
+.dark-mode .subtitle,
+.dark-mode label,
+.dark-mode #charCount,
+.dark-mode #todayDate,
+.dark-mode #greeting{
+
+    color:white;
+
+}
+
+.dark-mode .profileCard{
+
+    background:#1f2937;
+    color:white;
+
+}
+
+.dark-mode .profileCard h2{
+
+    color:#38BDF8;
+
+}
+
+.dark-mode .profileCard p{
+
+    color:white;
+
+}
+
+.dark-mode #cardDate{
+
+    color:#ddd;
+
+}
+
+/* ===================================
+   CARD GLOW EFFECT
+=================================== */
+
+.profileCard{
+
+    position:relative;
+
+}
+
+.profileCard::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-5px;
+    left:-5px;
+    right:-5px;
+    bottom:-5px;
+
+    border-radius:30px;
+
+    background:linear-gradient(45deg,#6C63FF,#00C9A7,#FF6B6B);
+
+    z-index:-1;
+
+    filter:blur(18px);
+
+    opacity:.5;
+
+}
+
+/* ===================================
+   FADE ANIMATION
+=================================== */
+
+.left,
+.profileCard{
+
+    animation:fadeIn 1s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+=================================== */
+
+@media (max-width:900px){
+
+    .main-container{
+
+        flex-direction:column;
+        width:100%;
+
+    }
+
+    .left,
+    .right{
+
+        width:100%;
+
+    }
+
+    .buttons{
+
+        grid-template-columns:1fr;
+
+    }
+
+    body{
+
+        padding:20px;
+
+    }
+
+}
